@@ -1,8 +1,8 @@
 namespace TodoLists.Models
 {
-    public class Task
+    public class Todo
     {
-        public Task(string description, bool isCompleted)
+        public Todo(string description, bool isCompleted)
         {
             this.Description = description;
             this.IsCompleted = isCompleted;

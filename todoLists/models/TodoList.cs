@@ -4,13 +4,13 @@ using System.Collections.Generic;
 
 namespace TodoLists.Models 
 {
-    public class List 
+    public class TodoList 
     {
-        public List(string name, string description, int owner, List<Task> tasks)
+        public TodoList(string name, string description, int owner, List<Todo> tasks)
         {
             if (tasks == null)
             {
-                this.Tasks = new List<Task>();
+                this.Tasks = new List<Todo>();
             }
             else 
             {
@@ -29,9 +29,9 @@ namespace TodoLists.Models
 
         public int OwnerId { get; private set; }
 
-        public List<Task> Tasks { get; private set; }
+        public List<Todo> Tasks { get; private set; }
 
-        public void AddTask(Task task)
+        public void AddTask(Todo task)
         {
             if (task == null) 
                 throw new ArgumentNullException(nameof(task));
@@ -39,7 +39,7 @@ namespace TodoLists.Models
             this.Tasks.Add(task);
         }
 
-        public void RemoveTask(Task task)
+        public void RemoveTask(Todo task)
         {
             if (task == null)
                 throw new ArgumentNullException(nameof(task));

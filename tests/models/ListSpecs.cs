@@ -12,7 +12,7 @@ namespace Tests
         public void Should_AddTask_When_AddTaskMethodCalled()
         {
             // Arrange
-            var taskToAdd = new Task("SomeTask", false);
+            var taskToAdd = new Todo("SomeTask", false);
 
             var builder = new ListBuilder();
             var list = builder
@@ -43,7 +43,7 @@ namespace Tests
         public void Should_RemoveTask_When_RemoveTaskMethodCalled()
         {
             // Arrange
-            var task = new Task("TodoTask", false);
+            var task = new Todo("TodoTask", false);
             
             var builder = new ListBuilder();
             var list = builder
@@ -79,8 +79,8 @@ namespace Tests
                 .WithName("CustomName")
                 .WithDescription("CustomDescription")
                 .WithOwnerId(7)
-                .WithTask(new Task("CustomTask1", false))
-                .WithTask(new Task("CustomTask2", false))
+                .WithTask(new Todo("CustomTask1", false))
+                .WithTask(new Todo("CustomTask2", false))
                 .Build();
 
             // Assert

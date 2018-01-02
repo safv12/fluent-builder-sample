@@ -9,7 +9,7 @@ namespace Tests
         {
             this.Name = "ListName";
             this.Description = "ListDescription";
-            this.Tasks = new List<Task>();
+            this.Tasks = new List<Todo>();
             this.OwnerId = 1;
         }
 
@@ -19,7 +19,7 @@ namespace Tests
 
         public int OwnerId { get; set; }
 
-        public List<Task> Tasks { get; set; }
+        public List<Todo> Tasks { get; set; }
 
         public ListBuilder WithName(string name)
         {
@@ -33,7 +33,7 @@ namespace Tests
             return this;
         }
 
-        public ListBuilder WithTask(Task task) 
+        public ListBuilder WithTask(Todo task) 
         {
             this.Tasks.Add(task);
             return this;
@@ -45,9 +45,9 @@ namespace Tests
             return this;
         }
 
-        public List Build()
+        public TodoList Build()
         {
-            return new List(this.Name, this.Description, this.OwnerId, this.Tasks);
+            return new TodoList(this.Name, this.Description, this.OwnerId, this.Tasks);
         }
     }
 }
