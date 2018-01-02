@@ -29,7 +29,7 @@ namespace Tests
 
         public ListBuilder WithDescription(string decription)
         {
-            this.Description = Description;
+            this.Description = decription;
             return this;
         }
 

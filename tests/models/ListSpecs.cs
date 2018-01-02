@@ -69,6 +69,7 @@ namespace Tests
             Assert.Throws<ArgumentNullException>(() => list.RemoveTask(null));
         }
 
+        [Fact]
         public void Should_InitializeCustomList_With_ListBuilder()
         {
             // Arrange
